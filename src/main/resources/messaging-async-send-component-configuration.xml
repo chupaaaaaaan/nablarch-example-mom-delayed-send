@@ -50,13 +50,13 @@
 
   <!-- メッセージング用コンポーネント定義ここから============================================================================================= -->
   <component name="messagingProvider" class="nablarch.integration.messaging.wmq.provider.WmqMessagingProvider">
-    <property name="queueManagerName" value="TEST" />
+    <property name="queueManagerName" value="QM1" />
     <property name="sendingQueueNames">
       <list>
-        <value>TEST.REQUEST</value>
+        <value>QUEUE.ON.QM2</value>
       </list>
     </property>
-    <property name="poisonQueueName" value="TEST.POISON" />
+<!--    <property name="poisonQueueName" value="TEST.POISON" />-->
     <property name="useXa" value="false" />
   </component>
 
@@ -69,7 +69,7 @@
   <component name="asyncMessageSendActionSettings" class="nablarch.fw.messaging.action.AsyncMessageSendActionSettings">
     <property name="formatDir" value="format" />
     <property name="headerFormatName" value="header" />                           <!-- フォーマットファイル名 -->
-    <property name="queueName" value="TEST.REQUEST" />                            <!-- 送信先キューの論理名 -->
+    <property name="queueName" value="QUEUE.ON.QM2" />                            <!-- 送信先キューの論理名 -->
     <property name="sqlFilePackage" value="com.nablarch.example.sql" />                    <!-- SQLファイルの配置パス -->
     <property name="formClassName"  value="com.nablarch.example.form.SendMessagingForm" /> <!-- Formファイルの配置パス -->
     <property name="headerItemList">
