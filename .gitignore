@@ -98,7 +98,6 @@ target
 .project
 .classpath
 WebContent/META-INF/MANIFEST.MF
-work
 app.log
 monitor.log
 /h2/db/*.db
